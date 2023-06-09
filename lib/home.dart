@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:practical_test/controllers/home_controller.dart';
 
-class SettingScreen extends StatefulWidget {
-  const SettingScreen({Key? key}) : super(key: key);
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
-  State<SettingScreen> createState() => _SettingScreenState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _SettingScreenState extends State<SettingScreen> {
+class _HomeScreenState extends State<HomeScreen> {
+  final _loginCtrl = Get.put(HomeController());
+
   bool isChecked = false;
 
   @override
@@ -83,7 +87,7 @@ class _SettingScreenState extends State<SettingScreen> {
                               Radius.circular(30),
                             ),
                           ),
-                          padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 20),
+                          padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
                           child: const Text(
                             "Representative",
                             style: TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.w500),
@@ -99,7 +103,7 @@ class _SettingScreenState extends State<SettingScreen> {
                               Radius.circular(30),
                             ),
                           ),
-                          padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 20),
+                          padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
                           child: Text(
                             "Granted Supplier",
                             style:
