@@ -1,6 +1,5 @@
 import 'dart:convert';
 
-import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -14,7 +13,6 @@ import '../main.dart';
 class LoginController extends GetxController {
   TextEditingController userName = TextEditingController();
   TextEditingController pass = TextEditingController();
-  Dio dio = Dio();
 
   dynamic writeStorage(String key, dynamic value) {
     dynamic object = value != null ? json.encode(value) : value;
